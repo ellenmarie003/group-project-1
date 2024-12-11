@@ -1,69 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TasteHub</title>
-    <link rel = "stylesheet" href = "reset.css"/> 
-<<<<<<< HEAD
-=======
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
->>>>>>> 72191ed29a01c5a740abc71b425b538831754142
 </head>
+
 <body>
     <header>
         <h1>TasteHub</h1>
         <p>
-            <h2>Your online recipe repository</h2>
+        <h2>Your online recipe repository</h2>
         </p>
     </header>
+
     <form>
-        <p>
-            <input placeholder = "New Recipe"/>
         
-            <label>Have made: </label> 
-            <input type = "checkbox"/>
-        
+        <div class="field is-grouped">
+            <div class="field">
+                <label class="label">New Recipe Name:</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="New Recipe Name" />
+                </div>
+            </div>
+
             <!-- <label for = "categories">Categories: </label> -->
-            <select name = "categories">
-                <option value = "Default">Categories</option>
-                <option value = "Breakfast">Breakfast</option>
-                <option value = "Lunch">Lunch</option>
-                <option value = "Dinner">Dinner</option>
-                <option value = "Dessert">Dessert</option>
-            </select>
-        </p> 
-        <p>
-            <label>Ingredients:</label>
-        </p>
-        <p>
-            <input placeholder = "Milk, eggs, sugar, flour"/>
-        </p> 
-        <p>
-            <label>Instructions:</label>
-        </p>
-        <p>
-            <input placeholder = "Combine dry ingredients..."/>
-        </p> 
-        <p>
-            Makes <input placeholder = "012"/> servings.
-            <button>Save Recipe</button>
-        </p>
+            <div class="field">
+                <label class="label">Categories:</label>
+                <div class="control">
+                    <div class="select">
+                        <select name="categories">
+                            <option value="Default">Select a category</option>
+                            <option value="Appetizers">Appetizer</option>
+                            <option value="Breakfast">Breakfast</option>
+                            <option value="Lunch">Lunch</option>
+                            <option value="Dinner">Dinner</option>
+                            <option value="Dessert">Dessert</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Ingredients:</label>
+            <div class="control">
+                <textarea class="textarea" placeholder="Milk, eggs, sugar, flour" /></textarea>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Instructions:</label>
+            <div class="control">
+                <textarea class="textarea" placeholder="Combine dry ingredients..."></textarea>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="field">
+                <label class="label">Servings:</label>
+                <div class="control">
+                    <input placeholder="#" />
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <label class="label">
+                        Have made:
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label class="radio">
+                        <input type="radio" name="question">
+                        Yes
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="question">
+                        No
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="control">
+            <button class="button is-link">Save Recipe</button>
+        </div>
     </form>
+
+    <br>
+    <br>
+    <br>
+
     <section>
         <h2>My recipes:</h2>
         <h2>
-            <label for = "sort by">Sort by: </label>
-            <select name = "sort by">
-                <option value = "Default">Have made</option>
-                <option value = "Breakfast">Have not made</option>
-                <option value = "Lunch">Category</option>
-                <option value = "Dinner">Rating (low-high)</option>
-                <option value = "Dessert">Rating (high-low)</option>
+            <label for="sort by">Sort by: </label>
+            <select name="sort by">
+                <option value="Default">Have made</option>
+                <option value="Breakfast">Have not made</option>
+                <option value="Lunch">Category</option>
+                <option value="Dinner">Rating (low-high)</option>
+                <option value="Dessert">Rating (high-low)</option>
             </select>
         </h2>
     </section>
 
-     <script scr = "./assets/script.js"></script>    
+    <script scr="./assets/script.js"></script>
 </body>
+
 </html>
