@@ -39,3 +39,4 @@ recipeForm.addEventListener('submit', function(event) {
         renderRecipes();
     }
 });
+
