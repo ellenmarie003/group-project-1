@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TasteHub</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./Assets/style.css" />
 </head>
 
@@ -16,6 +17,9 @@
         <h2>Your online recipe repository</h2>
         </p>
     </header>
+
+
+    <form class="box">
 
     <form>
         <div class="field is-grouped">
@@ -60,9 +64,10 @@
 
         <div class="field is-grouped">
             <div class="field">
-                <label class="label">Servings:</label>
+                <label for="servings" class="label">Servings:</label>
                 <div class="control">
-                    <input placeholder="#" />
+                    <input class="input" type="text" id="servings" name="servings" maxlength="2" size="2"
+                        placeholder="#" />
                 </div>
             </div>
 
@@ -85,6 +90,16 @@
                     </label>
                 </div>
             </div>
+
+            <div>
+                <label class="label">Star Rating:</label>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+            </div>
+
         </div>
 
         <div class="control">
