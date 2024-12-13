@@ -1,0 +1,35 @@
+body {
+padding: 20px;
+}
+
+header {
+  padding-bottom: 25px;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 800;
+  color: #94D1BE;
+}
+
+header h2 {
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 700;
+  color: #DAF0EE;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    /* Reduced padding for smaller screens */
+    .field {
+      display: flexbox;
+      flex-direction: column;
+      /* Allows the whole page to switch to column view for better viewing experience*/
+    }
+  }
+}
