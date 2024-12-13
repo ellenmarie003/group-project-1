@@ -19,100 +19,106 @@
         </p>
     </header>
 
+    <section class="section is-flex-wrap-wrap">
+        <form class="box">
 
-    <form class="box">
-
-    <form>
-        <div class="field is-grouped">
-            <div class="field">
-                <label class="label">New Recipe Name:</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="New Recipe Name" />
+            <div class="field is-grouped is-justify-content-space-evenly">
+                <div class="field">
+                    <label class="label">New Recipe Name:</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="New Recipe Name" />
+                    </div>
                 </div>
-            </div>
 
-            <!-- <label for = "categories">Categories: </label> -->
-            <div class="field">
-                <label class="label">Categories:</label>
-                <div class="control">
-                    <div class="select">
-                        <select name="categories">
-                            <option value="Default">Select a category</option>
-                            <option value="Appetizers">Appetizer</option>
-                            <option value="Breakfast">Breakfast</option>
-                            <option value="Lunch">Lunch</option>
-                            <option value="Dinner">Dinner</option>
-                            <option value="Dessert">Dessert</option>
-                        </select>
+                <!-- <label for = "categories">Categories: </label> -->
+                <div class="field">
+                    <label class="label">Categories:</label>
+                    <div class="control">
+                        <div class="select">
+                            <select name="categories">
+                                <option value="Default">Select a category</option>
+                                <option value="Appetizers">Appetizer</option>
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Lunch">Lunch</option>
+                                <option value="Dinner">Dinner</option>
+                                <option value="Dessert">Dessert</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="field">
-            <label class="label">Ingredients:</label>
+            <div class="field">
+                <label class="label">Ingredients:</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Milk, eggs, sugar, flour" /></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Instructions:</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Combine dry ingredients..."></textarea>
+                </div>
+            </div>
+
+            <div class="field is-grouped is-justify-content-space-evenly">
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <label class="label">Servings:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="control">
+                            <input class="input" type="text" maxlength="2" size="2" placeholder="#" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="control">
+                        <div class="field-label">
+                            <label class="label">
+                                Have made:
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <label class="radio">
+                                    <input type="radio" name="question">
+                                    Yes
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="question">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-label">
+                        <label class="label">Star Rating:</label>
+                    </div>
+                    <div class="field-body">
+                        <div class="field">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="control">
-                <textarea class="textarea" placeholder="Milk, eggs, sugar, flour" /></textarea>
+                <button class="button is-link">Save Recipe</button>
             </div>
-        </div>
+        </form>
+    </section>
 
-        <div class="field">
-            <label class="label">Instructions:</label>
-            <div class="control">
-                <textarea class="textarea" placeholder="Combine dry ingredients..."></textarea>
-            </div>
-        </div>
-
-        <div class="field is-grouped">
-            <div class="field">
-                <label for="servings" class="label">Servings:</label>
-                <div class="control">
-                    <input class="input" type="text" id="servings" name="servings" maxlength="2" size="2"
-                        placeholder="#" />
-                </div>
-            </div>
-
-            <div class="field">
-                <div class="control">
-                    <label class="label">
-                        Have made:
-                    </label>
-                </div>
-            </div>
-            <div class="field">
-                <div class="control">
-                    <label class="radio">
-                        <input type="radio" name="question">
-                        Yes
-                    </label>
-                    <label class="radio">
-                        <input type="radio" name="question">
-                        No
-                    </label>
-                </div>
-            </div>
-
-            <div>
-                <label class="label">Star Rating:</label>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
-            </div>
-
-        </div>
-
-        <div class="control">
-            <button class="button is-link">Save Recipe</button>
-        </div>
-    </form>
-
-    <br>
-    <br>
-    <br>
-
-    <section>
+    <section class="section">
         <h2>My recipes:</h2>
         <h2>
             <label for="sort by">Sort by: </label>
