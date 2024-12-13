@@ -1,10 +1,17 @@
+.checked {
+  color: #F4D06F;
+}
+
 body {
 padding: 20px;
 }
 
 header {
-  padding-bottom: 25px;
-  align-items: center;
+  background-color: #212227;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -12,14 +19,35 @@ header h1 {
   font-size: 24px;
   font-style: italic;
   font-weight: 800;
-  color: #94D1BE;
+  color: #fff8f0;
 }
 
 header h2 {
   font-size: 16px;
   font-style: italic;
   font-weight: 700;
-  color: #DAF0EE;
+  color: #aab9cf;
+}
+
+footer {
+  text-align: center;
+  background-color: #212227;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+footer h1 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff8f0;
+}
+
+footer h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #aab9cf;
 }
 
 @media (max-width: 768px) {
