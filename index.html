@@ -19,16 +19,13 @@
     <section class="section is-flex-wrap-wrap">
         <form class="box">
 
-<<<<<<< HEAD
     <form class="box">
 
-        <form>
+        <form id = "recipe-form">
             <div class="field is-grouped">
-=======
             <div class="field is-grouped is-justify-content-space-evenly">
->>>>>>> 5fc03bef62697a366549f36db344160b32fb265c
                 <div class="field">
-                    <label class="label">New Recipe Name:</label>
+                    <label for = "recipe-text" class="label">New Recipe Name:</label>
                     <div class="control">
                         <input class="input" type="text" placeholder="New Recipe Name" />
                     </div>
@@ -48,8 +45,6 @@
                                 <option value="Dessert">Dessert</option>
                             </select>
                         </div>
-<<<<<<< HEAD
-=======
                     </div>
                 </div>
             </div>
@@ -114,96 +109,14 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
->>>>>>> 5fc03bef62697a366549f36db344160b32fb265c
                     </div>
                 </div>
             </div>
 
-<<<<<<< HEAD
-            <div class="field">
-                <label class="label">Ingredients:</label>
-                <div class="control">
-                    <textarea class="textarea" placeholder="Milk, eggs, sugar, flour" /></textarea>
-                </div>
-            </div>
-
-            <div class="field">
-                <label class="label">Instructions:</label>
-                <div class="control">
-                    <textarea class="textarea" placeholder="Combine dry ingredients..."></textarea>
-                </div>
-            </div>
-
-            <div class="field is-grouped">
-                <div class="field">
-                    <label for="servings" class="label">Servings:</label>
-                    <div class="control">
-                        <input class="input" type="text" id="servings" name="servings" maxlength="2" size="2"
-                            placeholder="#" />
-                    </div>
-                </div>
-
-                <div class="field">
-                    <div class="control">
-                        <label class="label">
-                            Have made:
-                        </label>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="control">
-                        <label class="radio">
-                            <input type="radio" name="question">
-                            Yes
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="question">
-                            No
-                        </label>
-                    </div>
-                </div>
-
-                <div>
-                    <label id="stars" class="label">Star Rating:</label>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                    <span class="fa fa-star"></span>
-                </div>
-
-            </div>
-
-=======
->>>>>>> 5fc03bef62697a366549f36db344160b32fb265c
             <div class="control">
                 <button class="button is-link">Save Recipe</button>
             </div>
         </form>
-<<<<<<< HEAD
-
-        <section id="recipes">
-            <h2>My recipes:</h2>
-            <h2>
-                <label for="sort by">Sort by: </label>
-                <select id="categories" name="categories">
-                    <option value="Default">Select a category</option>
-                    <option value="Appetizers">Appetizer</option>
-                    <option value="Breakfast">Breakfast</option>
-                    <option value="Lunch">Lunch</option>
-                    <option value="Dinner">Dinner</option>
-                    <option value="Dessert">Dessert</option>
-                </select>
-            </h2>
-        </section>
-
-        <footer>
-            <h1>Created by:</h1>
-            <h2>Annie-Rose Binkerhoff, Grace Fernandez, Zachary Haskell, Emily Holt, Ellen Rogers</h2>
-        </footer>
-
-        <script scr="./assets/script.js"></script>
-=======
     </section>
 
     <section class="section">
@@ -218,10 +131,12 @@
                 <option value="Dessert">Rating (high-low)</option>
             </select>
         </h2>
+        <h2>
+            <ul id = "recipeList"></ul>
+        </h2>
     </section>
 
-    <script scr="./assets/script.js"></script>
->>>>>>> 5fc03bef62697a366549f36db344160b32fb265c
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
