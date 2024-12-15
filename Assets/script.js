@@ -48,12 +48,7 @@ recipeForm.addEventListener('submit', function(event) {
 
     const recipeText = recipeInput.value.trim();
 
-//     if (recipe) {
-//         recipes.push(recipe);
-//         recipeInput.value = '';
-//         renderRecipes();
-//     }
-// })
+
 
 if (recipeText === '') {
     return;
