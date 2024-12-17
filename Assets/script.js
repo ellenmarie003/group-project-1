@@ -2,6 +2,12 @@ const recipeInput = document.querySelector('#recipe-text');
 const recipeForm = document.querySelector('#recipe-form');
 const recipeList = document.querySelector('#recipe-list');
 
+let recipeName = document.querySelector('recipe-name');
+let recipeInstructions = document.querySelector('#recipe-instructions');
+let recipeIngredients = document.querySelector('#recipe-ingredients');
+let recipeCategory = document.getElementById('#category-dropdown');
+let recipeServings = document.querySelector('recipe-servings');
+
 let recipes = [];
 
 function renderRecipes() {
