@@ -80,4 +80,21 @@ recipeList.addEventListener('click', function (event) {
     }
 });
 
+const stars = document.querySelectorAll('.fa-star');
+
+stars.forEach((star) => {
+    star.addEventListener('click', function () {
+       
+        stars.forEach(s => s.classList.remove('checked'));
+        
+        this.classList.add('checked');
+        let previousStar = this.previousElementSibling;
+        while (previousStar) {
+            previousStar.classList.add('checked');
+            previousStar = previousStar.previousElementSibling;
+        }
+    });
+});
+    
+
 init();
