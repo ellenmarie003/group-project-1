@@ -1,3 +1,4 @@
+// FORM SCRIPT
 // const recipeInput = document.querySelector('#recipe-text');
 const recipeForm = document.querySelector('#recipe-form');
 const recipeList = document.querySelector('#recipe-list');
@@ -99,6 +100,7 @@ recipeForm.addEventListener('submit', (event) => {
 //     }
 // });
 
+// STAR RATING
 const stars = document.querySelectorAll('.fa-star');
 
 stars.forEach((star) => {
@@ -117,3 +119,22 @@ stars.forEach((star) => {
     
 
 init();
+
+// MODAL SCRIPT currently this code is saving the recipe whether save or delete is clicked, need to adjust this. Also need to fix the modal to clear the firm after saving, and not save after hitting cancel
+const saveRecipeBtn = document.getElementById('save-recipe-btn');
+const modal = document.getElementById('modal');
+const confirmBtn = document.getElementById('confirm-btn');
+const cancelBtn = document.getElementById('cancel-btn');
+
+saveRecipeBtn.addEventListener('click', () => {
+  modal.style.display = 'flex';
+});
+
+confirmBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+  alert('Recipe saved!');
+});
+
+cancelBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});

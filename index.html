@@ -23,7 +23,8 @@
                 <div class="field">
                     <label for="recipe-text" class="label">New Recipe Name:</label>
                     <div class="control">
-                        <input class="input" type="text" name="recipe-name" id="recipe-name" placeholder="New Recipe Name" />
+                        <input class="input" type="text" name="recipe-name" id="recipe-name"
+                            placeholder="New Recipe Name" />
                     </div>
                 </div>
 
@@ -47,14 +48,16 @@
             <div class="field">
                 <label for="recipe-text" class="label">Ingredients:</label>
                 <div class="control">
-                    <textarea class="textarea" name="recipe-text" id="recipe-ingredients" placeholder="Milk, eggs, sugar, flour"></textarea>
+                    <textarea class="textarea" name="recipe-text" id="recipe-ingredients"
+                        placeholder="Milk, eggs, sugar, flour"></textarea>
                 </div>
             </div>
 
             <div class="field">
                 <label for="recipe-text" class="label">Instructions:</label>
                 <div class="control">
-                    <textarea class="textarea" name="recipe-instructions" id="recipe-instructions" placeholder="Combine dry ingredients..."></textarea>
+                    <textarea class="textarea" name="recipe-instructions" id="recipe-instructions"
+                        placeholder="Combine dry ingredients..."></textarea>
                 </div>
             </div>
 
@@ -65,7 +68,8 @@
                     </div>
                     <div class="field-body">
                         <div class="control">
-                            <input id="recipe-servings" class="input" type="text" maxlength="2" size="2" placeholder="#" />
+                            <input id="recipe-servings" class="input" type="text" maxlength="2" size="2"
+                                placeholder="#" />
                         </div>
                     </div>
                 </div>
@@ -109,8 +113,20 @@
             </div>
 
             <div class="control">
-                <button class="button is-link">Save Recipe</button>
+                <button id="save-recipe-btn" class="button is-link">Save Recipe</button>
             </div>
+
+            <!-- Modal NEED TO FIX JS-->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <h3>Save Recipe, or select Cancel to go back and make changes!</h3>
+                    <div class="buttons">
+                        <button id="confirm-btn" class="button button-confirm">Save</button>
+                        <button id="cancel-btn" class="button button-cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
         </form>
     </section>
 
@@ -132,7 +148,10 @@
         </div>
         <h2>
             <ul id="recipe-list">
-                
+                <li>
+                    <h2>name</h2>
+                    <h3>instructions</h3>
+                </li>
             </ul>
         </h2>
     </section>
@@ -146,16 +165,3 @@
 </body>
 
 </html>
-
-
-
-
-<li>
-    <h2>name</h2>
-    <h3>instructions</h3>
-</li>
-
-
-
-
-
