@@ -1,113 +1,84 @@
-// FORM SCRIPT
-// const recipeInput = document.querySelector('#recipe-text');
-const recipeForm = document.querySelector('#recipe-form');
+// ELEMENTS
+const saveRecipeBtn = document.getElementById('save-recipe-btn');
+const modal = document.getElementById('modal');
+const confirmBtn = document.getElementById('confirm-btn');
+const cancelBtn = document.getElementById('cancel-btn');
+const form = document.getElementById('recipe-form');
+
 const recipeList = document.querySelector('#recipe-list');
 
 let recipeName = document.querySelector('#recipe-name');
-let recipeInstructions = document.querySelector('#recipe-instructions');
 let recipeIngredients = document.querySelector('#recipe-ingredients');
-let recipeCategory = document.getElementById('category-dropdown');
+let recipeInstructions = document.querySelector('#recipe-instructions');
+let recipeCategory = document.querySelector('#recipe-category');
 let recipeServings = document.querySelector('#recipe-servings');
 
 let recipes = [];
-
-function renderRecipes() {
-    recipeList.innerHTML = '';
-
-    for (let i = 0; i < recipes.length; i++) {
-        const recipe = recipes[i];
-
-        const li = document.createElement('li');
-        li.setAttribute('data-index', i);
-
-        const h2 = document.createElement('h2');
-        h2.textContent = recipe.recipeName;
-
-        const h3 = document.createElement('h3');
-        h3.textContent = recipe.recipeInstructions;
-
-        li.appendChild(h2)
-        li.appendChild(h3)
-
-        const button = document.createElement('button');
-        button.textContent = 'Delete Recipe';
-        button.addEventListener('click', function () {
-            removeRecipe(i);
-        });
-
-        li.appendChild(button);
-        recipeList.appendChild(li);
-    }
-}
-
+// LOCAL STORAGE
 function init() {
     const storedRecipes = JSON.parse(localStorage.getItem('recipes'));
-
-    if (storedRecipes !== null) {
-        recipes = storedRecipes;
-    }
+    if (storedRecipes) recipes = storedRecipes;
     renderRecipes();
 }
-
+// SAVE TO LOCAL
 function storeRecipes() {
     localStorage.setItem('recipes', JSON.stringify(recipes));
 }
-
+// HTML RENDERING
+function renderRecipes() {
+    recipeList.innerHTML = '';
+    recipes.forEach((recipe, i) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <h2>${recipe.recipeName}</h2>
+            <h3>${recipe.recipeIngredients}</h3>
+            <h4>${recipe.recipeInstructions}</h4>
+            <h5>${recipe.recipeCategory}</h5>
+            <h6>${recipe.recipeServings}</h6>
+            <button onclick="removeRecipe(${i})">Delete Recipe</button>
+        `;
+        recipeList.appendChild(li);
+    });
+}
 function removeRecipe(index) {
     recipes.splice(index, 1);
     storeRecipes();
     renderRecipes();
 }
-
-recipeForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
+// MODAL VISIBLE
+saveRecipeBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+});
+// SAVE/CLEAR ON CONFIRM
+confirmBtn.addEventListener('click', () => {
     const recipeNameValue = recipeName.value.trim();
     const recipeInstructionsValue = recipeInstructions.value.trim();
-
-
-    const recipeData = {
-        recipeName: recipeNameValue,
-        recipeInstructions: recipeInstructionsValue
-    };
-
-    console.log(recipeData)
-
-
-
-    // if (recipeText === '') {
-    //     return;
-    // }
-
-
-    recipes.push(recipeData);
-    // recipeInput.value = '';
-
-    storeRecipes();
-    renderRecipes();
+    if (recipeNameValue && recipeInstructionsValue) {
+        // Add recipe data to the array
+        recipes.push({
+            recipeName: recipeNameValue,
+            recipeInstructions: recipeInstructionsValue
+        });
+        storeRecipes();
+        renderRecipes();
+        form.reset();
+        modal.style.display = 'none';
+        alert('Recipe saved!');
+    } else {
+        alert('Please fill in all required fields.');
+    }
 });
-
-// recipeList.addEventListener('click', function (event) {
-//     const element = event.target;
-
-//     if (element.matches('button') === true) {
-
-//         const index = element.parentElement.getAttribute('data-index');
-//         recipes.splice(index, 1);
-
-//         storeRecipes();
-//         renderRecipes();
-//     }
-// });
-
+cancelBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+});
 // STAR RATING
 const stars = document.querySelectorAll('.fa-star');
-
 stars.forEach((star) => {
     star.addEventListener('click', function () {
-       
         stars.forEach(s => s.classList.remove('checked'));
-        
         this.classList.add('checked');
         let previousStar = this.previousElementSibling;
         while (previousStar) {
@@ -116,25 +87,4 @@ stars.forEach((star) => {
         }
     });
 });
-    
-
 init();
-
-// MODAL SCRIPT currently this code is saving the recipe whether save or delete is clicked, need to adjust this. Also need to fix the modal to clear the firm after saving, and not save after hitting cancel
-const saveRecipeBtn = document.getElementById('save-recipe-btn');
-const modal = document.getElementById('modal');
-const confirmBtn = document.getElementById('confirm-btn');
-const cancelBtn = document.getElementById('cancel-btn');
-
-saveRecipeBtn.addEventListener('click', () => {
-  modal.style.display = 'flex';
-});
-
-confirmBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-  alert('Recipe saved!');
-});
-
-cancelBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
