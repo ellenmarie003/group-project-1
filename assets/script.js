@@ -87,7 +87,7 @@ stars.forEach((star) => {
 });
 init();
 
-// OLD CODE BELOW FOR POTENTIAL FUTURE DEV
+// ELLEN OG JS LOCAL STORAGE CODE BELOW FOR POTENTIAL FUTURE DEV
 // const recipeForm = document.querySelector('#recipe-form');
 // const recipeList = document.querySelector('#recipe-list');
 
@@ -120,3 +120,20 @@ init();
 // }
 
 // function init()
+
+// GRACE OLD MODAL SCRIPT currently this code is saving the recipe whether save or delete is clicked, need to adjust this. Also need to fix the modal to clear the firm after saving, and not save after hitting cancel. JS at this time was also allowing the code to save 2x, when Save Recipe was clicked AND when Confirm was clicked. Needed to mash Ellen AND Grace's code and rewrite to make work together.
+// const saveRecipeBtn = document.getElementById('save-recipe-btn');
+// const modal = document.getElementById('modal');
+// const confirmBtn = document.getElementById('confirm-btn');
+// const cancelBtn = document.getElementById('cancel-btn');
+// saveRecipeBtn.addEventListener('click', () => {
+//   modal.style.display = 'flex';
+// });
+// confirmBtn.addEventListener('click', () => {
+//   modal.style.display = 'none';
+//   alert('Recipe saved!');
+// });
+// cancelBtn.addEventListener('click', () => {
+//   modal.style.display = 'none';
+// });
+
