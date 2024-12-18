@@ -12,6 +12,7 @@ rate there recipes from one to five stars for future reference.
 ## Visuals
 color palette image 
 ![alt text](unnamed.png)
+screenshot of TasteHub deployed website ![alt text](tastehub-screenshot.png)
  
 
 ## Features
