@@ -57,8 +57,12 @@ footer h2 {
   font-weight: 700;
 }
 
+#modal {
+  display: none;
+}
+
  .modal {
-  display: none; /* hides */
+  display: none;
   position: fixed;
   left: 0;
   top: 0;

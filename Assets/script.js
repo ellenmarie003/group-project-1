@@ -8,10 +8,10 @@ const form = document.getElementById('recipe-form');
 const recipeList = document.querySelector('#recipe-list');
 
 let recipeName = document.querySelector('#recipe-name');
-let recipeIngredients = document.querySelector('#recipe-ingredients');
+// let recipeIngredients = document.querySelector('#recipe-ingredients');
 let recipeInstructions = document.querySelector('#recipe-instructions');
-let recipeCategory = document.querySelector('#recipe-category');
-let recipeServings = document.querySelector('#recipe-servings');
+// let recipeCategory = document.querySelector('#recipe-category');
+// let recipeServings = document.querySelector('#recipe-servings');
 
 let recipes = [];
 // LOCAL STORAGE
@@ -31,10 +31,8 @@ function renderRecipes() {
         const li = document.createElement('li');
         li.innerHTML = `
             <h2>${recipe.recipeName}</h2>
-            <h3>${recipe.recipeIngredients}</h3>
+
             <h4>${recipe.recipeInstructions}</h4>
-            <h5>${recipe.recipeCategory}</h5>
-            <h6>${recipe.recipeServings}</h6>
             <button onclick="removeRecipe(${i})">Delete Recipe</button>
         `;
         recipeList.appendChild(li);
@@ -88,3 +86,37 @@ stars.forEach((star) => {
     });
 });
 init();
+
+// OLD CODE BELOW FOR POTENTIAL FUTURE DEV
+// const recipeForm = document.querySelector('#recipe-form');
+// const recipeList = document.querySelector('#recipe-list');
+
+// let recipeName = document.querySelector('recipe-name');
+// let recipeInstructions = document.querySelector('#recipe-instructions');
+// let recipeIngredients = document.querySelector('#recipe-ingredients');
+// let recipeCategory = document.getElementById('#category-dropdown');
+// let recipeServings = document.querySelector('recipe-servings');
+// let recipes = [];
+
+// function renderRecipes() {
+//     recipeList.innerHTML = '';
+
+//     for (let i = 0; i < recipes.length; i++) {
+//         const recipe = recipes[i];
+
+//         const li = document.createElement('li');
+//         li.textContent = recipe;
+//         li.setAttribute('data-index', i);
+
+//         const button = document.createElement('button');
+//         button.textContent = 'Delete Recipe';
+//         button.addEventListener('click', function () {
+//             removeRecipe(i);
+//         });
+
+//         li.appendChild(button);
+//         recipeList.appendChild(li);
+//     }
+// }
+
+// function init()
